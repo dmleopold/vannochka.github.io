@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Питомник Мейн-Кунов в Новосибирске. Первый питомник с расширенным спектром услуг">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Питомник Мейн Кунов</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/Cat.js"></script>
+    <script src="js/cattree.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+</head>
+
+<body>
+    <div style="display:none;">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <symbol id="icon-crown" viewbox="0 0 49 23">
+                <path d="M41.8399 22H6.99989C6.66144 22 6.3606 21.7851 6.25095 21.4657L1.0428 6.29874C0.901441 5.88527 1.12164 5.43605 1.5353 5.294C1.66216 5.25103 1.79446 5.24017 1.91725 5.26189C2.20359 5.27862 2.47046 5.45143 2.59415 5.73191C3.23797 7.19174 5.52829 11.9047 8.2001 11.9047C8.23318 11.9047 8.2667 11.9038 8.30068 11.9019C9.91229 11.8305 12.4328 9.97344 15.2885 1.53743C15.3977 1.21624 15.699 1 16.0384 1C16.3782 1 16.6795 1.21624 16.7887 1.53743C17.7637 4.41412 21.0318 11.8581 24.4253 11.8581C24.4344 11.8581 24.443 11.8576 24.4525 11.8576C26.0614 11.8382 28.5352 10.0354 31.1844 1.55507C31.2881 1.22438 31.594 1 31.9406 1H31.9483C32.298 1.00362 32.6039 1.23524 32.7008 1.57045C33.5105 4.35441 36.3821 11.6463 39.9043 11.9508C41.9622 12.12 44.2439 9.79475 46.4967 5.20172C46.6797 4.82669 47.1246 4.65796 47.5111 4.81855C47.8967 4.97824 48.0924 5.40981 47.9574 5.8052L42.5893 21.4657C42.4792 21.7856 42.1783 22 41.8399 22ZM7.56534 20.4189H41.2736L44.3758 11.3686C42.8765 12.9528 41.3542 13.6594 39.7666 13.5264C35.8656 13.1876 33.1888 7.57491 31.9442 4.27569C29.7458 10.4027 27.2915 13.4052 24.4706 13.4382C24.4552 13.4382 24.4407 13.4391 24.4253 13.4391C20.4831 13.4391 17.4398 7.40482 16.061 4.07619C13.7086 10.2743 11.1841 13.3559 8.37091 13.4817C6.92876 13.5373 5.67282 12.8198 4.59132 11.7554L7.56534 20.4189Z"></path>
+            </symbol>
+        </svg>
+    </div>
+    <header class="header">
+        <div class="header__container container">
+            <div class="header__wrapper">
+                <a class="logo header__logo" aria-label="Логотип питомника Мейн Кунов">
+                    <svg class="crown crown--header" width="55" height="25">
+                        <use xlink:href="#icon-crown" x="0" y="0"></use>
+                    </svg>
+                </a>
+                <div class="header__content">
+                    <p class="header__city">Новосибирск</p>
+                    <h1 class="header__title">Питомник Мейн-кунов</h1>
+                    <p class="header__lead">Первый питомник с расширенным спектром услуг</p> <a href="#" class="header__btn">Смотреть котиков</a> </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="advantages">
+            <div class="advantages__content">
+                <h2 class="section__title pets__title">Преимущества нашего питомника</h2>
+                <div class="advantages__two"> Почему мы? </div>
+                <div class="post-wrap">
+                    <div class="post-item">
+                        <div class="item-content">
+                            <div class="item-icon.hours"> <img src="img/feature-24hours.png" width="54" height="54"></div>
+                            <div class="item-body">
+                                <h3>График работы</h3>
+                                <p>Мы открыты 24 часа, 7 дней в неделю с 9:00 утра до 20:00 вечера. Заходите, котики будут рады!</p>
+                            </div>
+                            <div class="item-footer"> <a href="#" class="link"><span>Подробнее</span></a> </div>
+                        </div>
+                    </div>
+                    <div class="post-item">
+                        <div class="item-content">
+                            <div class="item-icon.consult"><img src="img/feature-consult.png" width="45" height="35"></div>
+                            <div class="item-body">
+                                <h3>Личная консультация</h3>
+                                <p>Перед выбором питомца Вы всегда можете проконсультироваться с нашими специлистами!</p>
+                            </div>
+                            <div class="item-footer"> <a href="#" class="link"><span>Подробнее</span></a> </div>
+                        </div>
+                    </div>
+                    <div class="post-item">
+                        <div class="item-content">
+                            <div class="item-icon.individual"><img src="img/feature-individual.png" width="32" height="32"></div>
+                            <div class="item-body">
+                                <h3>Индивидуальный подход</h3>
+                                <p>Мы любим котиков, но ещё больше мы любим наших клиентов. Индивидуальные условия ждут Вас!
+                                    <div class="item-footer"> <a href="#" class="link"><span>Подробнее</span></a> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section pets">
+            <div class="section__wrapper pets__wrapper container">
+                <h2 class="section__title pets__title">Питомцы</h2> <span class="section__lead pets__lead">Все представители нашего питомника имеют ветеринарный паспорт с отметками о прививках и документ с родословной</span>
+                <ul class="pets__list">
+                    <li class="pets__item "> <a class="pets__tab pets__tab--active" href="#pets-tab-content-1">Коты</a> </li>
+                    <li class="pets__item"> <a class="pets__tab" href="#pets-tab-content-2">Кошки</a> </li>
+                    <li class="pets__item"> <a class="pets__tab" href="#pets-tab-content-3">Котята</a> </li>
+                </ul>
+                <div class="pets__tab-content-wrapper">
+                    <div class="pets__tab-content show slider" id="pets-tab-content-1">
+                        <div class="slider">
+                            <input type="radio" name="switch" id="btn1" checked>
+                            <input type="radio" name="switch" id="btn2">
+                            <input type="radio" name="switch" id="btn3">
+                            <div class="switch">
+                                <label for="btn1"></label>
+                                <label for="btn2"></label>
+                                <label for="btn3"></label>
+                            </div>
+                            <div class="slider-inner">
+                                <div class="slides"> <img src="img/cats.jpg" /> <img src="img/catsss.jpg" /> <img src="img/cittens.jpg" /> </div>
+                            </div>
+                        </div>
+                        <div class="pets__btn-wraper"> <a href="#" class="pets__btn">Смотреть больше</a> </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section breed-features">
+            <div class="container">
+                <div class="section__wrapper breed-features__wrapper">
+                    <h6 class="section__title breed-features__title">Особенности породы</h6>
+                    <p class="section__lead breed-features__lead"> Мейн-Кун - это порода, которая вызывает к себе уважение. Приобретая в свой дом этого питомца, вы получите умное животное, которому нет равных </p>
+                    <div class="breed-features__image"> <img src="img/breed-features-desktop@2x.png" width="602" height="655" alt="Изображение рыжего Мейн Куна"> </div>
+                    <ul class="breed-features__list">
+                        <li class="breed-features__item breed-features__item--cohabitation"> Легко уживается в семьях с детьми или другими животными </li>
+                        <li class="breed-features__item breed-features__item--instruction"> Выполняет команды как дрессированная собака </li>
+                        <li class="breed-features__item breed-features__item--weight"> Вес может достигать 12 кг, а длина 1 м </li>
+                        <li class="breed-features__item breed-features__item--appearance"> Внешний вид этой кошки похож на дикую рысь </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="game">
+                <h2 class="section__title pets__title"> Карантин - не повод унывать</h2>
+                <div class="game__two">Поиграйте с котиком!</div>
+                <div id="world"></div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h5>Информация</h5>
+                    <ul>
+                        <li><a href="#">Связаться с нами</a></li>
+                        <li><a href="#">Сертификация</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Питомник</h5>
+                    <ul>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Партнёрская программа</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Пошощь</h5>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Наш форум</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Блог</h5>
+                    <ul>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Пожертвования</h5>
+                    <ul>
+                        <li><a href="#">PayPal</a></li>
+                        <li><a href="#">QIWI</a></li>
+                    </ul>
+                </div>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d150771.50014470317!2d82.81684977013064!3d54.995201681361195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dfe5e190cc4d97%3A0x9b3a0673e1d3e985!2z0J3QvtCy0L7RgdC40LHQuNGA0YHQuiwg0J3QvtCy0L7RgdC40LHQuNGA0YHQutCw0Y8g0L7QsdC7Lg!5e0!3m2!1sru!2sru!4v1588412511586!5m2!1sru!2sru" width="1100" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+        <div class="social-networks"> <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> <a href="#" class="google"><i class="fa fa-google-plus"></i></a> </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</body>
+
+</html>
